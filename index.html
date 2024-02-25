@@ -1,21 +1,206 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="da">
+<head>
+    <title>Coding Pirates HTML</title>
     <meta charset="utf-8">
-    <title>Solsystemet</title>
-  </head>
-  <body>
-    <div id="bodycontainer">
-      <h1>Solsystemet</h1>
-      <section>
-        <p>Velkommen til denne lille side om solsystemet. Ja, det er jo her vi bor, så det kunne være interessant at lære lidt mere om det kunne det ikke?</p>
-        <p>Klik på det område du gerne vil læse mere om</p>
+</head>
+<body>
+    <h1>Introduktion til HTML Elementer</h1>
+    <section>
+        <h2>Headers</h2>
+        <p>
+            Til at vise en overskrift bruger vi header tags. Vi har 6 forskellige at vælge imellem og det ser sådan her ud:
+        </p>
+
+        <p>
+            &lt;h1&gt;Min overskrift her&lt;/h1&gt;
+        </p>
+
+        <p>
+            Her er de forskellige overskrifter:
+        </p>
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5>H5</h5>
+        <h6>H6</h6>
+    </section>
+
+    <section>
+        <h2>Tekst</h2>
+        For at vise tekst bruger vi et paragraph tag. Det ser sådan her ud:
+
+        <p>&lt;p&gt;Her kan jeg skrive noget tekst&lt;/p&gt;</p>
+        <p>&lt;p&gt;Og hvis jeg vil have et linieskift er jeg nødt til at lave et nyt p tag&lt;/p&gt;</p>
+    </section>
+
+    <section>
+        <h2>Links</h2>
+        <p>En af de ting der gør internettet til internetter er vi kan lave links mellem hjemmesider (eller mellem afsnit på den samme side).</p>
+
+        <p>Til det bruger vi et anchor tag og det ser sådan her ud:</p>
+
+        <p>
+            &lt;a href="https://google.dk"&gt;Klik her får at gå til google.dk&lt;/a&gt;
+        </p>
+
+        <a href="https://google.dk">Klik her for at gå til google.dk</a>
+
+        <p>Bemærk at vi skal have en <abbr>href</abbr> (hypertext reference attribute) attribut med, som fortæller hvor vi gerne vil hen</p>
+    </section>
+
+    <section>
+        <h2>Kombination</h2>
+        <p>Bemærk at vi kan kombinere tags. Vi kan f.eks lave en overskrift som samtidig er et link.</p>
+        <p>Det ser sådan her ud:</p>
+        <p>
+            &lt;a href="https://google.dk"&gt;&lt;h2&gt;Klik på overskriften her&lt;/h2&gt;&lt;/a&gt;
+        </p>
+        <a href="https://google.dk"><h2>Kllik på overskriften her</h2></a>
+    </section>
+
+    <section>
+        <h2>Billeder</h2>
+        <p>For at vise billeder skal vi bruge et img tag</p>
+        <p>Lige som anchor tagget kræver img tagget også en attribut. Her hedder den <code>src</code></p>
+        <p><code>src</code> angiver stien til det billede vi gerne vil vise, det kan enten være en sti på computeren eller en URL til en hjemmeside.</p>
+
+        <p>Sådan her ser det ud hvis jeg gerne vil indsætte et billede som ligger lokalt på min computer</p>
+        <p>
+            &lt;img src="images/thatsnomoon.jpg" alt="Picture of the moon"&gt;
+        </p>
+        <img src="images/thatsnomoon.jpg" alt="Picture of the moon">
+        <p>Bemrk at img tagget ikke har et start og slut tag, det slutter bare med det samme</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">Læs mere om img tagget her</a>
+    </section>
+
+    <section>
+        <h2>Lister</h2>
+        <p>Lister kan bruges til rigtig mange ting</p>
+        <p>I HTML har vi to slags lister:</p>
         <ul>
-          <li><a href="solen/index.html">Solen</a></li>
-          <li><a href="planeterne/index.html">Planeterne</a></li>
-          <li><a href="maaner/index.html">Månerne</a></li>
+            <li>Unordered Lists: Sådan en som den her</li>
+            <li>Ordered Lists: Hvor de enkelte list elementer er numererede</li>
         </ul>
-      </section>
-    </div>
-  </body>
+        <h3>Unordered List</h3>
+        <p>For at lave en unordered list gør vi sådan her:</p>
+        <p>&lt;ul&gt;</p>
+        <p>&nbsp;&nbsp;&lt;li&gt;Her er vores første element&lt;/li&gt;</p>
+        <p>&nbsp;&nbsp;&lt;li&gt;Her er vores andet element&lt;/li&gt;</p>
+        <p>&lt;/ul&gt;</p>
+        <ul>
+            <li>Her er vores første element</li>
+            <li>Her er vores andet element</li>
+        </ul>
+        <h3>Ordered List</h3>
+        <p>For at lave en ordered list gør vi sådan her:</p>
+        <p>&lt;ol&gt;</p>
+        <p>&nbsp;&nbsp;&lt;li&gt;Her er vores første element&lt;/li&gt;</p>
+        <p>&nbsp;&nbsp;&lt;li&gt;Her er vores andet element&lt;/li&gt;</p>
+        <p>&lt;/ol&gt;</p>
+
+        <ol>
+            <li>Her er vores første element</li>
+            <li>Her er vores andet element</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Tabeller</h2>
+        <p>Tabeller er også et af de HTML elementer som kan bruges til rigtig mange ting</p>
+        <p>En tabel består af</p>
+        <ol>
+            <li>Et table tag</li>
+            <li>Evt. en thead</li>
+            <li>En tbody</li>
+            <li>Evt. en tfoot</li>
+        </ol>
+
+        <p>
+            Inden i hver thead, tbody eller tfoot har man så en eller flere rækker, hver af dem i et tr tag.
+        </p>
+        <p>
+            Og inden i hver tr har man så de enkelte celler, hver af dem i et td tag.
+        </p>
+        <p>Det ser såddan her ud:</p>
+        <p>&lt;table&gt;</p>
+        <p>&nbsp;&nbsp;&lt;thead&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fornavn</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efternavn</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</p>
+        <p>&nbsp;&nbsp;&lt;/thead&gt;</p>
+        <p>&nbsp;&nbsp;&lt;tbody&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anders</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</p>
+        <p>&nbsp;&nbsp;&lt;/tbody&gt;</p>
+        <p>&nbsp;&nbsp;&lt;tfoot&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th colspan="2"&gt;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slut</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;</p>
+        <p>&nbsp;&nbsp;&lt;/tfoot&gt;</p>
+        <p>&lt;/table&gt;</p>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        Fornavn
+                    </td>
+                    <td>
+                        Efternavn
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Anders</td>
+                    <td>And</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="2">
+                        Slut
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+        <ol>
+            <li><a href="html-tutorial/table.html">Her er et eksempel mere på en tabel</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">Læs mere om tabeller her</a></li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Knapper</h2>
+        <p>Knapper kan vi lave med et button tag. Det ser sådan her ud</p>
+        <p>&lt;button type="button"&gt;Tryk her&lt;/button&gt;</p>
+        <button type="button">Tryk her</button>
+        <p>Buttons bliver først sådan rigtig sjove når vi kommer til at lave noget JavaScript eller skal arbejde med forms</p>
+    </section>
+
+    <section>
+        <h2>Style tag</h2>
+        <p>Nu blir' det godt! Style tagget er en af de måder vi kan bruge til at begynde at styre <i>hvordan</i> vores HTML skal set ud.</p>
+        <p>Som regel sætter vi vores style tag i head delen af et HTML dokument.</p>
+        <p>Det kan se sådan her ud:</p>
+        <p>&lt;style&gt;</p>
+        <p>&nbsp;&nbsp;p {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;color: green</p>
+        <p>&nbsp;&nbsp;}</p>
+        <p>&lt;/style&gt;</p>
+        <a href="html-tutorial/style.html">Se eksempler på den her side</a>
+    </section>
+</body>
 </html>
