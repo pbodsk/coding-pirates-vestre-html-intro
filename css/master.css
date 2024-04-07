@@ -1,34 +1,41 @@
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-image: url("../images/background.webp");
+  color: #d9cfcf;
 }
 
-#bodycontainer {
-  width: 80%;
-  margin: auto;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  margin-top: 50px;
-  padding: 10px;
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
-a {
-  color: #999999;
+.centered {
+  grid-column: 2;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+
+nav>ul {
+  list-style-type: none;
+  padding-top: 24px;
+}
+
+.navigationAnchor {
   text-decoration: none;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  color: #d9cfcf;
 }
 
-a:hover {
-  color: #ffffff;
+.navigationAnchor:hover {
   text-decoration: underline;
-}
-
-table {
-  border: 1px solid #ffffff;
-  border-collapse: collapse;
-  padding: 20px;
-}
-
-table th, table td {
-  border: 1px solid #ffffff;
-  padding: 10px;
+  color: #daa92c;
 }
